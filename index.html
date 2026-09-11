@@ -126,34 +126,33 @@
     color: var(--text-muted);
   }
 
-  /* Month Tabs */
+  /* Month Tabs - Mobile First Multi-Row Wrapping */
   .month-tabs {
     display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    padding-bottom: 8px;
-    scrollbar-width: none;
-  }
-  .month-tabs::-webkit-scrollbar {
-    display: none;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 6px;
   }
 
   .tab-btn {
-    flex-shrink: 0;
-    padding: 8px 16px;
-    border: 1px solid var(--border);
+    padding: 7px 14px;
+    border: 1.5px solid var(--border);
     background: white;
     border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.92rem;
+    font-weight: 700;
     color: var(--text-muted);
     cursor: pointer;
     transition: all 0.2s;
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   .tab-btn:hover {
     border-color: var(--primary);
     color: var(--primary);
+    background: #FFF5F2;
   }
 
   .tab-btn.active {
@@ -524,8 +523,8 @@
     <!-- Month Tabs -->
     <div class="month-tabs" id="monthTabs">
       <button class="tab-btn active" data-month="all">전체보기 (114일)</button>
-      <button class="tab-btn" data-month="2026-09">2026년 9월</button><button class="tab-btn" data-month="2026-08">2026년 8월</button><button class="tab-btn" data-month="2026-07">2026년 7월</button><button class="tab-btn" data-month="2026-06">2026년 6월</button><button class="tab-btn" data-month="2026-05">2026년 5월</button><button class="tab-btn" data-month="2026-04">2026년 4월</button><button class="tab-btn" data-month="2026-03">2026년 3월</button>
-      <button class="tab-btn" data-month="album_only">📷 앨범만 보기</button>
+      <button class="tab-btn" data-month="2026-09">9월</button><button class="tab-btn" data-month="2026-08">8월</button><button class="tab-btn" data-month="2026-07">7월</button><button class="tab-btn" data-month="2026-06">6월</button><button class="tab-btn" data-month="2026-05">5월</button><button class="tab-btn" data-month="2026-04">4월</button><button class="tab-btn" data-month="2026-03">3월</button>
+      <button class="tab-btn" data-month="album_only">📷 특별앨범</button>
     </div>
 
     <!-- Action Bar -->
