@@ -617,10 +617,8 @@
       card.className = `card ${item.type === 'album' ? 'album-card' : 'report-card'}`;
       card.id = item.id;
 
-      // Auto open first card by default so latest photo is immediately visible
-      if (idx === 0 && !searchQuery) {
-        card.classList.add('open');
-      }
+      // Grandparents-first UX: All cards open by default so they can just scroll!
+      card.classList.add('open');
 
       const photoCount = item.images.length;
       const friendlyDate = formatFriendlyDate(item.date);
